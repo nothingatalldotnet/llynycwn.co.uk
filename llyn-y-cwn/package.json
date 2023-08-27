@@ -9,6 +9,7 @@
     "eslint-fix": "eslint --fix"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.8.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",

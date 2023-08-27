@@ -1,5 +1,6 @@
 <template>
     <header>
+        <h1>LLYN Y CWN</h1>
         <nav>
             <ul>
                 <li>
@@ -13,7 +14,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://llynycwn.bandcamp.com/" target="_blank" title="Youtube">
+                    <a href="https://www.instagram.com/llynycwnmusic/" target="_blank" title="Instagram">
+                        <font-awesome-icon :icon="['fab', 'instagram']" aria-hidden="true" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/user/mankymusic1" target="_blank" title="Youtube">
                         <font-awesome-icon :icon="['fab', 'youtube']" aria-hidden="true" />
                     </a>
                 </li>
@@ -25,23 +31,48 @@
 <style lang="scss">
     header {
         display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
         padding: .5rem 1rem;
-        height: 50px;
+
+        @media (max-width: #{768px}) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        h1 {
+
+        }
 
         nav {
             margin-left: auto;
 
-            ul {
-                list-style: none;
+            @media (max-width: #{768px}) {
+                margin-left: 0;
             }
 
-            ul li {
-                display: inline-flex;
-                margin-left: 1rem;
+            ul {
+                list-style: none;
+                padding: 0;
+            
+                li {
+                    display: inline-flex;
 
-                a {
-                    color: #000;
-                    text-decoration: none;
+                    @media (max-width: #{768px}) {
+                        &:first-child {
+                            margin-left: 4px;
+                        }
+                    }
+
+                    &:not(:first-child) {
+                        margin-left: 1rem;
+                    }
+
+                    a {
+                        color: #000;
+                        text-decoration: none;
+                    }
                 }
             }
         }
