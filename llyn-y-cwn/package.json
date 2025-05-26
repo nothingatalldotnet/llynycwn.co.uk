@@ -9,16 +9,17 @@
     "eslint-fix": "eslint --fix"
   },
   "dependencies": {
-    "@builder.io/partytown": "^0.8.0",
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-brands-svg-icons": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/vue-fontawesome": "^3.0.3",
-    "core-js": "^3.8.3",
+    "@builder.io/partytown": "^0.8.2",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-brands-svg-icons": "^6.5.1",
+    "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "@fortawesome/vue-fontawesome": "^3.0.6",
+    "core-js": "^3.36.1",
     "register-service-worker": "^1.7.2",
-    "vue": "^3.2.13",
+    "set-blocking": "^2.0.0",
+    "vue": "^3.4.21",
     "vue-class-component": "^8.0.0-0",
-    "vue-router": "^4.0.3"
+    "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.4.0",
@@ -31,10 +32,10 @@
     "@vue/eslint-config-airbnb": "^6.0.0",
     "@vue/eslint-config-typescript": "^9.1.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-vue": "^8.0.3",
     "eslint-plugin-vuejs-accessibility": "^1.1.0",
-    "sass": "^1.32.7",
+    "sass": "^1.72.0",
     "sass-loader": "^12.0.0",
     "typescript": "~4.5.5"
   }

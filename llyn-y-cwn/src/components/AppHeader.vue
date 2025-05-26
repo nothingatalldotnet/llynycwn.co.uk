@@ -42,7 +42,7 @@
         }
 
         h1 {
-
+            color: #ffffff;
         }
 
         nav {
@@ -70,7 +70,7 @@
                     }
 
                     a {
-                        color: #000;
+                        color: #ffffff;
                         text-decoration: none;
                     }
                 }
