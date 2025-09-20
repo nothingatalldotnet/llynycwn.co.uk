@@ -2,13 +2,22 @@
     <section class="live-section">
         <h3>LIVE</h3>
         <div>
-            <p>Llyn Y Cwn plays Harmonicon Festival, Todmorden, 10-12 Oct</p>
+            <p>
+                <a href="https://www.tickettailor.com/events/resonance1/1703018?fbclid=PAZXh0bgNhZW0CMTEAAac8azwvybYWBBe-PEzfW9_tGu-SSWGw4FOpHy1kF3OWv5XU5ycMJt_HujSIbg_aem_qn_tszezTjn8v4H12b6qNw" target="_blank">
+                    Harmonicon Festival, Todmorden, 10-12 Oct
+                </a>
+            </p>
+            <p>
+                <a href="https://www.headfirstbristol.co.uk/whats-on/st-thomas-the-martyr/fri-7-nov-ssp10-w-jake-muir-fergus-clark-llyn-y-cwn-alliyah-enyo-dan-thorman-136844#e136844" target="_blank">
+                    Sensitivity Sound Program SSP#2, Bristol, 7 Nov
+                </a>
+            </p>
         </div>
     </section>
 </template>
 
 <style lang="scss">
-       @mixin keyframes($animation-name) {
+    @mixin keyframes($animation-name) {
         @-webkit-keyframes #{$animation-name} { @content; }
         @-moz-keyframes #{$animation-name} { @content; }
         @-ms-keyframes #{$animation-name} { @content; }
@@ -79,6 +88,10 @@
             text-transform: uppercase;
             font-size: 1.3rem;
             color: #fff;
+
+            @media (max-width: 767px) {
+                text-align: center;
+            }
         }
 
         div {
@@ -89,6 +102,16 @@
                 font-size: 14px;
                 opacity: 0;
                 @include animation('fadeUp 1s ease forwards');
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+
+                @media (max-width: 767px) {
+                    text-align: center;
+                }
+
             }
 
             p:nth-child(1) { animation-delay: 0.2s; }

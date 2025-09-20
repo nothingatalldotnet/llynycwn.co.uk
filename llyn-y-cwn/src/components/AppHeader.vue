@@ -48,13 +48,17 @@
 
         h1 {
             color: #ffffff;
+
+            @media (max-width: #{768px}) {
+                margin: auto;
+            }
         }
 
         nav {
             margin-left: auto;
 
             @media (max-width: #{768px}) {
-                margin-left: 0;
+                margin: auto;
             }
 
             ul {

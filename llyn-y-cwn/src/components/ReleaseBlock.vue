@@ -108,12 +108,20 @@
     text-transform: uppercase;
     font-size: 1.3rem;
     color: #fff;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
+
+    @media (max-width: 767px) {
+        text-align: center;
+    }
 
     li {
       color: #eee;

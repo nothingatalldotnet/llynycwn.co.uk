@@ -7,7 +7,7 @@
 <style lang="scss">
 
     html {
-        background: url("./assets/background-megaliths.webp") no-repeat center center fixed;
+        background: url("./assets/background-megaliths-in-dub-no-text.webp") no-repeat center center fixed;
         background-size: cover;
         height: 100%;
         width: 100%;

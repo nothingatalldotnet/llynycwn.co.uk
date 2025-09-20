@@ -16,7 +16,7 @@
 </template>
 
 <style lang="scss">
-        @mixin keyframes($animation-name) {
+    @mixin keyframes($animation-name) {
         @-webkit-keyframes #{$animation-name} { @content; }
         @-moz-keyframes #{$animation-name} { @content; }
         @-ms-keyframes #{$animation-name} { @content; }
@@ -86,16 +86,24 @@
             text-transform: uppercase;
             font-size: 1.6rem;
             color: #fff;
+
+            @media (max-width: 767px) {
+                text-align: center;
+            }
         }
 
         div {
             padding-bottom: 0.83em;
 
             p {
-            color: #eee;
-            font-size: 14px;
-            opacity: 0;
-            @include animation('fadeUp 1s ease forwards');
+                color: #eee;
+                font-size: 14px;
+                opacity: 0;
+                @include animation('fadeUp 1s ease forwards');
+
+                @media (max-width: 767px) {
+                    text-align: center;
+                }
             }
 
             p:nth-child(1) { animation-delay: 0.2s; }
@@ -103,8 +111,8 @@
             p:nth-child(3) { animation-delay: 0.8s; }
 
             &.center-hard {
-            text-align: center;
-            font-weight: bold;
+                text-align: center;
+                font-weight: bold;
             }
         }
 
