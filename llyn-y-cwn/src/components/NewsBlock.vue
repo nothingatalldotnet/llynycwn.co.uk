@@ -1,20 +1,14 @@
 <template>
     <section class="news-section">
-        <h2>Megaliths</h2>
+        <h2>Megaliths In Dub</h2>
         <div>
-            <p>Llyn Y Cwn Unleashes Sonic Monoliths with New Album "Megaliths"</p>
-            <p>Step into the shadows of ancient mysticism as Llyn Y Cwn, the maestro of Welsh dark ambient, unveils the mesmerizing odyssey that is "Megaliths." This highly anticipated album is a profound exploration of the sacred resonance embedded within stone circles, capturing years of field recordings from the silent and enigmatic monuments that stand as timeless witnesses to the ebb and flow of existence.</p>
-            <p>Crafted by artist Ben Powell, "Megaliths" is a sonic voyage that mirrors the sacred spaces marked by stoic pillars of rock, each track representing a specific site. Delving deep into the esoteric significance of stone circles, the album portrays these structures not merely as historical relics but as religious ceremonial sites where the veil between our world and the eternal realm becomes tantalizingly thin.</p>
-            <p>Prepare to be engulfed in ambient soundscapes extracted from burial chambers, where Ben has utilized convolution reverbs to replicate the ominous ambiance of these ancient spaces. A veteran of stone circle exploration, Ben's decades-long journey has yielded field recordings that capture the haunting whispers of wind and the solemn caws of crows, enveloping the listener in a ghostly atmosphere that transcends the ordinary.</p>
-            <p>Guided by the wisdom found in Julian Cope's "The Modern Antiquarian" and Aurbrey Burl's "A Guide to the Stone Circles of Britain," Llyn Y Cwn embarks on a sonic pilgrimage across the country, exploring the remote bleakness of these sites. Ronald Hutton's insight, that the circular shape of stone rings "mirrors the sun, the full moon, and the bounds of the horizon," becomes a tangible reality in the album's mesmerizing compositions. Aubrey Burl's words resonate as the album transitions from the cramped, gloomy chambers of tombs to the unroofed, wide rings—a journey from darkness to light, from the dead to the living, and from the grave to the sky.</p>
-            <p>"Megaliths" invites the audience to experience stones strategically positioned to occupy the centre of the world, acting as microcosms of the surrounding landscape. Archaeological speculation on whether the stones are monuments to ancestors or supernatural entities, such as deities, adds an extra layer of intrigue to the album's enigmatic narrative.</p>
-            <p>More than just an album, "Megaliths" is a ritual, a sonic séance that transcends the constraints of time and space. It beckons listeners to commune with the ancient energies that saturate these sacred circles — an invitation to traverse astral planes, to witness the convergence of past and present, and to embrace the otherworldly energies that resonate within these ancient stones. Brace yourselves for an atmospheric descent into the heart of mysterious realms, where the boundaries between the earthly and the spiritual blur into an indistinguishable, haunting atmosphere.</p>
-            <p>Experience the haunting beauty of "Megaliths" as Llyn Y Cwn unlocks the gates to the mystical realms of stone circles.</p>
+            <p>The megaliths stand—timeless, unyielding. Their histories stretch beyond recorded memory, their presence imbued with silent narratives of the land. In 2024, Megaliths sought to channel this ancient energy into pure sound. Yet no history exists without its counterpart—no creation without its shadow.</p>
+            <p>Megaliths In Dub is the echo beneath the surface, the unheard rhythm that has always been there. Suppressed tempos emerge, pulsing with the primal force of forgotten rites. Guitar invocations from the live rituals of 2024 weave through the fabric of the album, distorting and reshaping the familiar.</p>
+            <p>It is a sonic metamorphosis—a spectral reflection of the megalithic presence.</p>
         </div>
         <div class="center-hard">
-            <p>Embrace the darkness, and let the stones speak.</p>
-            <p>The journey begins now.</p>
-            <a href="https://llynycwn.bandcamp.com/album/megaliths" target="_blank" title="LLyn Y Cwn - Megaliths">
+            <p>The stones have been disturbed.</p>
+            <a href="https://coldspring.bandcamp.com/album/megaliths-in-dub-csr354cd" target="_blank" title="LLyn Y Cwn - Megaliths In Dub">
                 Buy on Bandcamp
             </a>
         </div>
@@ -22,22 +16,12 @@
 </template>
 
 <style lang="scss">
-    @mixin keyframes($animation-name) {
-        @-webkit-keyframes #{$animation-name} {
-            @content;
-        }
-        @-moz-keyframes #{$animation-name} {
-            @content;
-        }  
-        @-ms-keyframes #{$animation-name} {
-            @content;
-        }
-        @-o-keyframes #{$animation-name} {
-            @content;
-        }  
-        @keyframes #{$animation-name} {
-            @content;
-        }
+        @mixin keyframes($animation-name) {
+        @-webkit-keyframes #{$animation-name} { @content; }
+        @-moz-keyframes #{$animation-name} { @content; }
+        @-ms-keyframes #{$animation-name} { @content; }
+        @-o-keyframes #{$animation-name} { @content; }
+        @keyframes #{$animation-name} { @content; }
     }
 
     @mixin animation($str) {
@@ -51,29 +35,47 @@
     @include keyframes(pulse) {
         0% {
             backdrop-filter: blur(5px);
-            background-color: rgba(128, 128, 128, 0.1);
+            transform: scale(1);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.08);
         }
         50% {
-            backdrop-filter: blur(5px);
-            background-color: rgba(121, 101, 138, 0.1)
+            backdrop-filter: blur(9px);
+            transform: scale(1.01);
+            box-shadow: 0 0 14px rgba(255, 255, 255, 0.18);
         }
         100% {
             backdrop-filter: blur(5px);
-            background-color: rgba(128, 128, 128, 0.1);
+            transform: scale(1);
+            box-shadow: 0 0 6px rgba(255, 255, 255, 0.08);
         }
     }
+
+    @include keyframes(shimmer-bg) {
+        0%   { background-position: 0% 50%; }
+        100% { background-position: 120% 50%; }
+    }
+
+    @include keyframes(fadeUp) {
+        0% { opacity: 0; transform: translateY(20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
     .news-section {
         padding: 0.5rem 0.5rem 1em 0.5rem;
         width: 60%;
         max-width: 1000px;
         height: fit-content;
         overflow: hidden;
-        background-color: rgba(128, 128, 128, 0.1);
+        background: linear-gradient(
+            270deg,
+            rgba(25, 25, 25, 0.85),
+            rgba(35, 35, 35, 0.8),
+            rgba(25, 25, 25, 0.85)
+        );
+        background-size: 200% 200%;
         backdrop-filter: blur(8px);
-        animation-name: color;
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        @include animation('pulse 10s infinite');
+
+        @include animation('pulse 10s infinite ease-in-out, shimmer-bg 45s linear infinite');
 
         @media (max-width: 767px) {
             max-width: unset;
@@ -82,19 +84,27 @@
 
         h2 {
             text-transform: uppercase;
+            font-size: 1.6rem;
+            color: #fff;
         }
 
         div {
             padding-bottom: 0.83em;
 
             p {
-                color: #fff;
-                font-size: 14px;
+            color: #eee;
+            font-size: 14px;
+            opacity: 0;
+            @include animation('fadeUp 1s ease forwards');
             }
 
+            p:nth-child(1) { animation-delay: 0.2s; }
+            p:nth-child(2) { animation-delay: 0.5s; }
+            p:nth-child(3) { animation-delay: 0.8s; }
+
             &.center-hard {
-                text-align: center;
-                font-weight: bold;
+            text-align: center;
+            font-weight: bold;
             }
         }
 
@@ -102,8 +112,17 @@
             color: #fff;
             font-size: 14px;
             text-decoration: none;
-            padding: 8px;
-            background: #000000;
+            padding: 8px 12px;
+            background: #000;
+            border: 1px solid #fff;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background: #fff;
+                color: #000;
+                box-shadow: 0 0 8px #fff;
+                transform: scale(1.05);
+            }
         }
     }
 </style>

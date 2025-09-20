@@ -19,11 +19,18 @@
         div {
             padding: 0.5rem;
             backdrop-filter: blur(5px);
-            background-color: rgba(128, 128, 128, 0.1);
+            background: linear-gradient(
+                270deg,
+                rgba(25, 25, 25, 0.85),
+                rgba(35, 35, 35, 0.8),
+                rgba(25, 25, 25, 0.85)
+            );
+            background-size: 200% 200%;
+            backdrop-filter: blur(8px);
 
             p, a {
                 margin: 0;
-                color: #000;
+                color: #fff;
                 text-decoration: none;
             }
         }
