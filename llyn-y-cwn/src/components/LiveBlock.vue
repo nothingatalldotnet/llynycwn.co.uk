@@ -1,22 +1,14 @@
 <template>
-    <section class="news-section">
-        <h2>Megaliths In Dub</h2>
+    <section class="live-section">
+        <h3>LIVE</h3>
         <div>
-            <p>The megaliths stand—timeless, unyielding. Their histories stretch beyond recorded memory, their presence imbued with silent narratives of the land. In 2024, Megaliths sought to channel this ancient energy into pure sound. Yet no history exists without its counterpart—no creation without its shadow.</p>
-            <p>Megaliths In Dub is the echo beneath the surface, the unheard rhythm that has always been there. Suppressed tempos emerge, pulsing with the primal force of forgotten rites. Guitar invocations from the live rituals of 2024 weave through the fabric of the album, distorting and reshaping the familiar.</p>
-            <p>It is a sonic metamorphosis—a spectral reflection of the megalithic presence.</p>
-        </div>
-        <div class="center-hard">
-            <p>The stones have been disturbed.</p>
-            <a href="https://coldspring.bandcamp.com/album/megaliths-in-dub-csr354cd" target="_blank" title="LLyn Y Cwn - Megaliths In Dub">
-                Buy on Bandcamp
-            </a>
+            <p>Llyn Y Cwn plays Harmonicon Festival, Todmorden, 10-12 Oct</p>
         </div>
     </section>
 </template>
 
 <style lang="scss">
-        @mixin keyframes($animation-name) {
+       @mixin keyframes($animation-name) {
         @-webkit-keyframes #{$animation-name} { @content; }
         @-moz-keyframes #{$animation-name} { @content; }
         @-ms-keyframes #{$animation-name} { @content; }
@@ -60,7 +52,8 @@
         100% { opacity: 1; transform: translateY(0); }
     }
 
-    .news-section {
+
+    .live-section {
         padding: 0.5rem 0.5rem 1em 0.5rem;
         width: 60%;
         max-width: 1000px;
@@ -82,9 +75,9 @@
             width: 90%;
         }
 
-        h2 {
+        h3 {
             text-transform: uppercase;
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             color: #fff;
         }
 
@@ -92,37 +85,17 @@
             padding-bottom: 0.83em;
 
             p {
-            color: #eee;
-            font-size: 14px;
-            opacity: 0;
-            @include animation('fadeUp 1s ease forwards');
+                color: #eee;
+                font-size: 14px;
+                opacity: 0;
+                @include animation('fadeUp 1s ease forwards');
             }
 
             p:nth-child(1) { animation-delay: 0.2s; }
             p:nth-child(2) { animation-delay: 0.5s; }
             p:nth-child(3) { animation-delay: 0.8s; }
 
-            &.center-hard {
-            text-align: center;
-            font-weight: bold;
-            }
         }
 
-        a {
-            color: #fff;
-            font-size: 14px;
-            text-decoration: none;
-            padding: 8px 12px;
-            background: #000;
-            border: 1px solid #fff;
-            transition: all 0.3s ease;
-
-            &:hover {
-                background: #fff;
-                color: #000;
-                box-shadow: 0 0 8px #fff;
-                transform: scale(1.05);
-            }
-        }
     }
 </style>

@@ -1,6 +1,7 @@
 <template>
   <main>
     <news-block/>
+    <live-block/>
     <release-block/>
   </main>
 </template>
@@ -8,7 +9,7 @@
 <style lang="scss">
   main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
     padding: 0.5rem 1rem;
@@ -16,6 +17,7 @@
 
     @media (max-width: 767px) {
       flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -24,11 +26,13 @@
 
 <script>
 import NewsBlock from '@/components/NewsBlock.vue';
+import LiveBlock from '@/components/LiveBlock.vue';
 import ReleaseBlock from '@/components/ReleaseBlock.vue';
 
 export default {
   components: {
     NewsBlock,
+    LiveBlock,
     ReleaseBlock
   },
 };

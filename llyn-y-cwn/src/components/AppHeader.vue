@@ -19,6 +19,11 @@
                     </a>
                 </li>
                 <li>
+                    <a href="https://www.facebook.com/llynycwn/" target="_blank" title="Facebook">
+                        <font-awesome-icon :icon="['fab', 'facebook']" aria-hidden="true" />
+                    </a>
+                </li>
+                <li>
                     <a href="https://www.youtube.com/user/mankymusic1" target="_blank" title="Youtube">
                         <font-awesome-icon :icon="['fab', 'youtube']" aria-hidden="true" />
                     </a>
