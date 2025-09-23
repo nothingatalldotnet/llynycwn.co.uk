@@ -33,22 +33,22 @@
   import ReleaseBlock from '@/components/ReleaseBlock.vue';
 
   export default {
+    name: "HomeView",
     components: {
       NewsBlock,
       LiveBlock,
       ReleaseBlock
     },
-    name: "HomeView",
-      data() {
-        return {
-          structuredData: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Llyn Y Cwn",
-            "url": "https://llynycwn.co.uk/",
-            "logo": "https://llynycwn.co.uk/logo.png"
-          })
-        }
+    data() {
+      return {
+        structuredData: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Llyn Y Cwn",
+          "url": "https://llynycwn.co.uk/",
+          "logo": "https://llynycwn.co.uk/logo.png"
+        })
       }
+    }
   };
   </script>
