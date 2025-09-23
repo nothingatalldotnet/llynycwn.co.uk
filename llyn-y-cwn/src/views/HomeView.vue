@@ -3,6 +3,11 @@
     <news-block/>
     <live-block/>
     <release-block/>
+    <component
+          :is="'script'"
+          type="application/ld+json"
+          v-html="structuredData"
+        />
   </main>
 </template>
 
@@ -20,20 +25,30 @@
       align-items: center;
     }
   }
-
-
 </style>
 
 <script>
-import NewsBlock from '@/components/NewsBlock.vue';
-import LiveBlock from '@/components/LiveBlock.vue';
-import ReleaseBlock from '@/components/ReleaseBlock.vue';
+  import NewsBlock from '@/components/NewsBlock.vue';
+  import LiveBlock from '@/components/LiveBlock.vue';
+  import ReleaseBlock from '@/components/ReleaseBlock.vue';
 
-export default {
-  components: {
-    NewsBlock,
-    LiveBlock,
-    ReleaseBlock
-  },
-};
-</script>
+  export default {
+    components: {
+      NewsBlock,
+      LiveBlock,
+      ReleaseBlock
+    },
+    name: "HomeView",
+      data() {
+        return {
+          structuredData: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Llyn Y Cwn",
+            "url": "https://llynycwn.co.uk/",
+            "logo": "https://llynycwn.co.uk/logo.png"
+          })
+        }
+      }
+  };
+  </script>
