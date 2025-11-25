@@ -18,11 +18,16 @@
         box-sizing: border-box;
 
         @media (max-width: #{768px}) {
-            flex-direction: column;
-            align-items: flex-start;
+        position: relative;     // <-- normal flow
+        background: #000;       // <-- or your hero image
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        top: 0;                 // <-- remove offset
 
-            position: relative;
-            top: 100px;
+        h1, h2 {
+            margin: 0 auto;     // center horizontally
+        }
         }
 
         h1, h2 {

@@ -27,6 +27,9 @@
       flex-direction: column-reverse;
       overflow: scroll;
       align-items: center;
+      height: auto;
+      min-height: 100vh;
+      overflow: visible;
     }
 
     > * {
@@ -37,6 +40,8 @@
 
       @media (max-width: 767px) {
         width: 100%;
+        position: relative;
+        height: auto;
       }
     }
 
