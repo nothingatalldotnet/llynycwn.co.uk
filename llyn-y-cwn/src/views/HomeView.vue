@@ -1,8 +1,9 @@
 <template>
   <main>
-    <news-block/>
-    <live-block/>
-    <release-block/>
+    <left-block/>
+    <right-block/>
+    <div class="blend"></div>
+
     <component
           :is="'script'"
           type="application/ld+json"
@@ -14,30 +15,80 @@
 <style lang="scss">
   main {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    padding: 0.5rem 1rem;
-    gap: 50px;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 
     @media (max-width: 767px) {
-      flex-direction: column;
+      flex-direction: column-reverse;
+      overflow: scroll;
       align-items: center;
+    }
+
+    > * {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 50%;
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+    }
+
+    left-block {
+      left: 0;
+      z-index: 1;
+
+      @media (max-width: 767px) {
+        width:100%;
+      }
+    }
+
+    right-block {
+      right: 0;
+      z-index: 1;
+
+      @media (max-width: 767px) {
+        width:100%;
+      }
+    }
+
+    .blend {
+      position: absolute;
+      top: 0;
+      left: 40%;
+      width: 20%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+
+      background: linear-gradient(
+      to right,
+      rgba(0,0,0,0),
+      rgba(0,0,0,1),
+      rgba(0,0,0,0)
+      );
+
+      mix-blend-mode: multiply;
+      filter: blur(40px);
     }
   }
 </style>
 
 <script>
-  import NewsBlock from '@/components/NewsBlock.vue';
-  import LiveBlock from '@/components/LiveBlock.vue';
-  import ReleaseBlock from '@/components/ReleaseBlock.vue';
+  import LeftBlock from '@/components/LeftBlock.vue';
+  import RightBlock from '@/components/RightBlock.vue';
 
   export default {
     name: "HomeView",
     components: {
-      NewsBlock,
-      LiveBlock,
-      ReleaseBlock
+      LeftBlock,
+      RightBlock
     },
     data() {
       return {
