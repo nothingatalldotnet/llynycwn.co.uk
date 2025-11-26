@@ -113,6 +113,7 @@
             &.center-hard {
                 text-align: center;
                 font-weight: bold;
+                margin-bottom: 10px;
             }
         }
 
