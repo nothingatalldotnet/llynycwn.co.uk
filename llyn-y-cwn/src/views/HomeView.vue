@@ -13,76 +13,85 @@
 </template>
 
 <style lang="scss">
-  main {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+main {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  /* Apply shared layout ONLY to the two blocks */
+  > left-block,
+  > right-block {
+    position: absolute;
+    top: 0;
     height: 100%;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+    width: 50%;
 
     @media (max-width: 767px) {
-      flex-direction: column-reverse;
-      overflow: scroll;
-      align-items: center;
+      width: 100%;
+      position: relative;
       height: auto;
-      min-height: 100vh;
-      overflow: visible;
     }
+  }
 
-    > * {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      width: 50%;
+  left-block {
+    left: 0;
+    z-index: 1;
+  }
 
-      @media (max-width: 767px) {
-        width: 100%;
-        position: relative;
-        height: auto;
-      }
-    }
+  right-block {
+    right: 0;
+    z-index: 1;
+  }
 
-    left-block {
-      left: 0;
-      z-index: 1;
+  .blend {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 20%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
 
-      @media (max-width: 767px) {
-        width:100%;
-      }
-    }
-
-    right-block {
-      right: 0;
-      z-index: 1;
-
-      @media (max-width: 767px) {
-        width:100%;
-      }
-    }
-
-    .blend {
-      position: absolute;
-      top: 0;
-      left: 40%;
-      width: 20%;
-      height: 100%;
-      z-index: 2;
-      pointer-events: none;
-
-      background: linear-gradient(
+    background: linear-gradient(
       to right,
       rgba(0,0,0,0),
       rgba(0,0,0,1),
       rgba(0,0,0,0)
+    );
+
+    mix-blend-mode: multiply;
+    filter: blur(40px);
+
+    @media (max-width: 767px) {
+      display: block;
+      left: 0;
+      top: 40%;
+      width: 100%;
+      height: 20%;
+
+      background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1),
+        rgba(0,0,0,0)
       );
 
-      mix-blend-mode: multiply;
-      filter: blur(40px);
+      filter: blur(30px);
     }
   }
+}
+
 </style>
 
 <script>

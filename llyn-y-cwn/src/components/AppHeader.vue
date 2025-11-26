@@ -46,7 +46,6 @@ header {
         h1, h2 {
             margin: 0 auto;
             text-align: center;
-            width: 50%;
         }
 
         h1 {
