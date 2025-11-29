@@ -8,7 +8,7 @@
         </div>
         <div class="center-hard">
             <p>The stones have been disturbed.</p>
-            <a href="https://coldspring.bandcamp.com/album/megaliths-in-dub-csr354cd" target="_blank" title="LLyn Y Cwn - Megaliths In Dub">
+            <a href="https://llynycwn.bandcamp.com/album/megaliths-in-dub" target="_blank" title="LLyn Y Cwn - Megaliths In Dub">
                 Buy on Bandcamp
             </a>
         </div>
